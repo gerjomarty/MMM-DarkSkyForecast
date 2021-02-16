@@ -1,14 +1,16 @@
-# MMM-DarkSkyForecast
+# MMM-OpenWeatherMapForecast
 
 This a module for <strong>MagicMirror</strong><br>
 https://magicmirror.builders/<br>
 https://github.com/MichMich/MagicMirror
 
-![Screenshot](/../screenshots/MMM-DarkSkyForecast.png?raw=true "Screenshot")
+![Screenshot](/screenshots/MMM-OpenWeatherMapForecast.png?raw=true "Screenshot")
 
 A weather module that displays current, hourly and daily forecast information
 using data from the OpenWeather One Call API. This is a replacement module for MMM-MyWeather, now that Weather Underground no longer allows free API access.  This a complete rewrite from scratch but maintains
 much of the same functionality.
+
+[gerjomarty](https://github.com/gerjomarty) reworked the module to use OpenWeatherMap after Dark Sky no longer accepts free API access.
 
 **NOTE:** This module uses the Nunjucks templating system introduced in version 2.2.0 of MagicMirror.  If you're seeing nothing on your display where you expect this module to appear, make sure your MagicMirror version is at least 2.2.0.
 
@@ -16,8 +18,8 @@ much of the same functionality.
 ## Installation
 
 1. Navigate into your MagicMirror `modules` folder and execute<br>
-`git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git`.
-2. Enter the new `MMM-DarkSkyForecast` directory and execute `npm install`.
+`git clone https://github.com/MarcLandis/MMM-OpenWeatherMapForecast.git`.
+2. Enter the new `MMM-OpenWeatherMapForecast` directory and execute `npm install`.
 
 
 
@@ -176,7 +178,7 @@ Find out your latitude and longitude here:
 
 ```
 {
-  module: "MMM-DarkSkyForecast",
+  module: "MMM-OpenWeatherMapForecast",
   header: "Weather",
   position: "top_right",
   classes: "default everyone",
@@ -199,7 +201,7 @@ Find out your latitude and longitude here:
 
 ## Layouts
 
-![Layouts](/../screenshots/forecast-layouts.png?raw=true "Layouts")
+![Layouts](/screenshots/forecast-layouts.png?raw=true "Layouts")
 
 
 ## Styling
@@ -207,17 +209,17 @@ Find out your latitude and longitude here:
 This module is set to be 300px wide by default.  If you wish to override it, you can add the following to your `custom.css` file:
 
 ```
-.MMM-DarkSkyForecast .module-content {
+.MMM-OpenWeatherMapForecast .module-content {
   width: 500px; /* adjust this to taste */
 }
 ```
 
-Most important elements of this module have one or more class names applied. Examine the `MMM-DarkSkyForecast.css` or inspect elements directly with your browser of choice to determine what class you would like to override.
+Most important elements of this module have one or more class names applied. Examine the `MMM-OpenWeatherMapForecast.css` or inspect elements directly with your browser of choice to determine what class you would like to override.
 
 
 ## For Module Developers
 
-This module broadcasts a notification when it recieves a weather update.  The notification is `DARK_SKY_FORECAST_WEATHER_UPDATE` and the payload contains Dark Sky's JSON weather forecast object.  For details on the weather object, see https://darksky.net/dev/docs.
+This module broadcasts a notification when it recieves a weather update.  The notification is `OPENWEATHER_ONE_CALL_FORECAST_DATA` and the payload contains OpenWeatherMap's JSON weather forecast object.  For details on the weather object, see https://openweathermap.org/api/one-call-api.
 
 
 ## Attributions

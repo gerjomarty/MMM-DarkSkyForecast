@@ -1,20 +1,19 @@
 {
-  "name": "mmm-darkskyforecast",
-  "version": "1.0.0",
-  "description": "Magic Mirror module that gets weather forecast data from Dark Sky",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jclarke0000/MMM-DarkSkyForecast"
-  },
-  "main": "MMM-DarkSkyForecast.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jeff Clarke",
-  "license": "MIT",
-  "dependencies": {
-    "moment": "^2.22.2",
-    "npm": "^6.4.1",
-    "request": "^2.88.0"
-  }
+    "name": "mmm-openweathermapforecast",
+    "version": "1.0.0",
+    "description": "Magic Mirror module that gets weather forecast data from OpenWeatherMap",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarcLandis/MMM-OpenWeatherMapForecast"
+    },
+    "main": "MMM-OpenWeatherMapForecast.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jeff Clarke",
+    "license": "MIT",
+    "dependencies": {
+        "moment": "^2.28.0",
+        "needle": "^2.5.2"
+    }
 }
